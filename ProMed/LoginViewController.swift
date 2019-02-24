@@ -40,6 +40,20 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    @IBAction func loginPressed(_ sender: Any) {
+        
+        let storyboard = UIStoryboard.init(name: "Professionals", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "proBase")
+        self.present(vc, animated: true)
+        
+    }
+    
+    private func validateData() -> Bool {
+        var ready = true
+        
+        return ready
+    }
+    
 
     
 

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B540955222248EC00FA1B74 /* ProfessionalScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B540954222248EC00FA1B74 /* ProfessionalScheduleViewController.swift */; };
+		7B54095722224B1E00FA1B74 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54095622224B1E00FA1B74 /* Patient.swift */; };
+		7B6B63DB2221B75A0062BB75 /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DA2221B75A0062BB75 /* Patients.storyboard */; };
+		7B6B63DD2221B7660062BB75 /* Professionals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DC2221B7660062BB75 /* Professionals.storyboard */; };
+		7B6B63E22221F8940062BB75 /* ProfessionalAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B63E12221F8940062BB75 /* ProfessionalAgendaViewController.swift */; };
+		7BA7F246221F5FB20034B25C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F245221F5FB20034B25C /* APIManager.swift */; };
+		7BA7F248221F60040034B25C /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F247221F60040034B25C /* Persistencia.swift */; };
+		7BA7F24A221F604C0034B25C /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F249221F604C0034B25C /* Professional.swift */; };
 		7BD549AC2217C07A00DABA17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD549AB2217C07A00DABA17 /* AppDelegate.swift */; };
 		7BD549B32217C07A00DABA17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD549B12217C07A00DABA17 /* Main.storyboard */; };
 		7BD549B52217C07B00DABA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD549B42217C07B00DABA17 /* Assets.xcassets */; };
@@ -16,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B540954222248EC00FA1B74 /* ProfessionalScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalScheduleViewController.swift; sourceTree = "<group>"; };
+		7B54095622224B1E00FA1B74 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		7B6B63DA2221B75A0062BB75 /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
+		7B6B63DC2221B7660062BB75 /* Professionals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professionals.storyboard; sourceTree = "<group>"; };
+		7B6B63E12221F8940062BB75 /* ProfessionalAgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalAgendaViewController.swift; sourceTree = "<group>"; };
+		7BA7F245221F5FB20034B25C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		7BA7F247221F60040034B25C /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
+		7BA7F249221F604C0034B25C /* Professional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
 		7BD549A82217C07A00DABA17 /* ProMed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProMed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD549AB2217C07A00DABA17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD549B22217C07A00DABA17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +53,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B6B63DE2221F04F0062BB75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7BA7F249221F604C0034B25C /* Professional.swift */,
+				7B54095622224B1E00FA1B74 /* Patient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B6B63DF2221F0620062BB75 /* SingletonManager */ = {
+			isa = PBXGroup;
+			children = (
+				7BA7F245221F5FB20034B25C /* APIManager.swift */,
+				7BA7F247221F60040034B25C /* Persistencia.swift */,
+			);
+			path = SingletonManager;
+			sourceTree = "<group>";
+		};
+		7B6B63E02221F0750062BB75 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7BD549B12217C07A00DABA17 /* Main.storyboard */,
+				7B6B63DA2221B75A0062BB75 /* Patients.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7B6B63E32221F89A0062BB75 /* Professionals */ = {
+			isa = PBXGroup;
+			children = (
+				7B6B63DC2221B7660062BB75 /* Professionals.storyboard */,
+				7B6B63E12221F8940062BB75 /* ProfessionalAgendaViewController.swift */,
+				7B540954222248EC00FA1B74 /* ProfessionalScheduleViewController.swift */,
+			);
+			path = Professionals;
+			sourceTree = "<group>";
+		};
 		7BD5499F2217C07A00DABA17 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +111,11 @@
 			children = (
 				7BD549AB2217C07A00DABA17 /* AppDelegate.swift */,
 				7BD549C12217C2B900DABA17 /* LoginViewController.swift */,
+				7B6B63E32221F89A0062BB75 /* Professionals */,
+				7B6B63DF2221F0620062BB75 /* SingletonManager */,
+				7B6B63DE2221F04F0062BB75 /* Model */,
+				7B6B63E02221F0750062BB75 /* Storyboards */,
 				7BD549BF2217C24400DABA17 /* Utilidades.swift */,
-				7BD549B12217C07A00DABA17 /* Main.storyboard */,
 				7BD549B42217C07B00DABA17 /* Assets.xcassets */,
 				7BD549B62217C07B00DABA17 /* LaunchScreen.storyboard */,
 				7BD549B92217C07B00DABA17 /* Info.plist */,
@@ -127,7 +183,9 @@
 			files = (
 				7BD549B82217C07B00DABA17 /* LaunchScreen.storyboard in Resources */,
 				7BD549B52217C07B00DABA17 /* Assets.xcassets in Resources */,
+				7B6B63DB2221B75A0062BB75 /* Patients.storyboard in Resources */,
 				7BD549B32217C07A00DABA17 /* Main.storyboard in Resources */,
+				7B6B63DD2221B7660062BB75 /* Professionals.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +196,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA7F246221F5FB20034B25C /* APIManager.swift in Sources */,
+				7BA7F24A221F604C0034B25C /* Professional.swift in Sources */,
+				7B54095722224B1E00FA1B74 /* Patient.swift in Sources */,
 				7BD549AC2217C07A00DABA17 /* AppDelegate.swift in Sources */,
 				7BD549C22217C2B900DABA17 /* LoginViewController.swift in Sources */,
+				7B540955222248EC00FA1B74 /* ProfessionalScheduleViewController.swift in Sources */,
 				7BD549C02217C24400DABA17 /* Utilidades.swift in Sources */,
+				7BA7F248221F60040034B25C /* Persistencia.swift in Sources */,
+				7B6B63E22221F8940062BB75 /* ProfessionalAgendaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
