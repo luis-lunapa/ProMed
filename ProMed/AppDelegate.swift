@@ -5,7 +5,7 @@
 //  Created by Luis Luna on 2/15/19.
 //  Copyright © 2019 DeepTech. All rights reserved.
 //
-
+// swiftlint:disable line_length
 import UIKit
 
 @UIApplicationMain

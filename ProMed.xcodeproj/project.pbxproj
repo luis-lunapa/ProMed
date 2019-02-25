@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B540955222248EC00FA1B74 /* ProfessionalScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B540954222248EC00FA1B74 /* ProfessionalScheduleViewController.swift */; };
+		4F4308DB79CA908A99E66E04 /* Pods_ProMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542996138600E6CD9174983 /* Pods_ProMed.framework */; };
+		7B540955222248EC00FA1B74 /* ProNewAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B540954222248EC00FA1B74 /* ProNewAppointmentViewController.swift */; };
 		7B54095722224B1E00FA1B74 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54095622224B1E00FA1B74 /* Patient.swift */; };
 		7B6B63DB2221B75A0062BB75 /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DA2221B75A0062BB75 /* Patients.storyboard */; };
 		7B6B63DD2221B7660062BB75 /* Professionals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DC2221B7660062BB75 /* Professionals.storyboard */; };
-		7B6B63E22221F8940062BB75 /* ProfessionalAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B63E12221F8940062BB75 /* ProfessionalAgendaViewController.swift */; };
+		7B6B63E22221F8940062BB75 /* ProAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */; };
 		7BA7F246221F5FB20034B25C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F245221F5FB20034B25C /* APIManager.swift */; };
 		7BA7F248221F60040034B25C /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F247221F60040034B25C /* Persistencia.swift */; };
 		7BA7F24A221F604C0034B25C /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F249221F604C0034B25C /* Professional.swift */; };
@@ -21,14 +22,16 @@
 		7BD549B82217C07B00DABA17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD549B62217C07B00DABA17 /* LaunchScreen.storyboard */; };
 		7BD549C02217C24400DABA17 /* Utilidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD549BF2217C24400DABA17 /* Utilidades.swift */; };
 		7BD549C22217C2B900DABA17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD549C12217C2B900DABA17 /* LoginViewController.swift */; };
+		7BD6C53822239622006E029C /* ProPatientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6C53722239622006E029C /* ProPatientDetailsViewController.swift */; };
+		7BD6C53A2223A46D006E029C /* ProMyPatientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6C5392223A46D006E029C /* ProMyPatientsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B540954222248EC00FA1B74 /* ProfessionalScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalScheduleViewController.swift; sourceTree = "<group>"; };
+		7B540954222248EC00FA1B74 /* ProNewAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProNewAppointmentViewController.swift; sourceTree = "<group>"; };
 		7B54095622224B1E00FA1B74 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		7B6B63DA2221B75A0062BB75 /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
 		7B6B63DC2221B7660062BB75 /* Professionals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professionals.storyboard; sourceTree = "<group>"; };
-		7B6B63E12221F8940062BB75 /* ProfessionalAgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalAgendaViewController.swift; sourceTree = "<group>"; };
+		7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProAgendaViewController.swift; sourceTree = "<group>"; };
 		7BA7F245221F5FB20034B25C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7BA7F247221F60040034B25C /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
 		7BA7F249221F604C0034B25C /* Professional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		7BD549B92217C07B00DABA17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BD549BF2217C24400DABA17 /* Utilidades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilidades.swift; sourceTree = "<group>"; };
 		7BD549C12217C2B900DABA17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7BD6C53722239622006E029C /* ProPatientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPatientDetailsViewController.swift; sourceTree = "<group>"; };
+		7BD6C5392223A46D006E029C /* ProMyPatientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProMyPatientsViewController.swift; sourceTree = "<group>"; };
+		BF6206938B19EF968DE99110 /* Pods-ProMed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProMed.debug.xcconfig"; path = "Target Support Files/Pods-ProMed/Pods-ProMed.debug.xcconfig"; sourceTree = "<group>"; };
+		E372BFABF0B145FB2137EB63 /* Pods-ProMed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProMed.release.xcconfig"; path = "Target Support Files/Pods-ProMed/Pods-ProMed.release.xcconfig"; sourceTree = "<group>"; };
+		F542996138600E6CD9174983 /* Pods_ProMed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProMed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +55,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4308DB79CA908A99E66E04 /* Pods_ProMed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64A5BA24E888B68DB52BB2D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF6206938B19EF968DE99110 /* Pods-ProMed.debug.xcconfig */,
+				E372BFABF0B145FB2137EB63 /* Pods-ProMed.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7B6B63DE2221F04F0062BB75 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				7B6B63DC2221B7660062BB75 /* Professionals.storyboard */,
-				7B6B63E12221F8940062BB75 /* ProfessionalAgendaViewController.swift */,
-				7B540954222248EC00FA1B74 /* ProfessionalScheduleViewController.swift */,
+				7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */,
+				7BD6C5392223A46D006E029C /* ProMyPatientsViewController.swift */,
+				7B540954222248EC00FA1B74 /* ProNewAppointmentViewController.swift */,
+				7BD6C53722239622006E029C /* ProPatientDetailsViewController.swift */,
 			);
 			path = Professionals;
 			sourceTree = "<group>";
@@ -95,6 +115,8 @@
 			children = (
 				7BD549AA2217C07A00DABA17 /* ProMed */,
 				7BD549A92217C07A00DABA17 /* Products */,
+				64A5BA24E888B68DB52BB2D0 /* Pods */,
+				FED9039EC5EBA9D2905A4C72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +145,14 @@
 			path = ProMed;
 			sourceTree = "<group>";
 		};
+		FED9039EC5EBA9D2905A4C72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F542996138600E6CD9174983 /* Pods_ProMed.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BD549BC2217C07B00DABA17 /* Build configuration list for PBXNativeTarget "ProMed" */;
 			buildPhases = (
+				FE14B1380692B0772CB9EE3D /* [CP] Check Pods Manifest.lock */,
 				7BD549A42217C07A00DABA17 /* Sources */,
 				7BD549A52217C07A00DABA17 /* Frameworks */,
 				7BD549A62217C07A00DABA17 /* Resources */,
+				677389069AEBEA8C314A7FCB /* [CP] Embed Pods Frameworks */,
+				7BD6C53622230C23006E029C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,6 +224,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		677389069AEBEA8C314A7FCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProMed/Pods-ProMed-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProMed/Pods-ProMed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BD6C53622230C23006E029C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		FE14B1380692B0772CB9EE3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProMed-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7BD549A42217C07A00DABA17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -201,10 +306,12 @@
 				7B54095722224B1E00FA1B74 /* Patient.swift in Sources */,
 				7BD549AC2217C07A00DABA17 /* AppDelegate.swift in Sources */,
 				7BD549C22217C2B900DABA17 /* LoginViewController.swift in Sources */,
-				7B540955222248EC00FA1B74 /* ProfessionalScheduleViewController.swift in Sources */,
+				7B540955222248EC00FA1B74 /* ProNewAppointmentViewController.swift in Sources */,
 				7BD549C02217C24400DABA17 /* Utilidades.swift in Sources */,
+				7BD6C53A2223A46D006E029C /* ProMyPatientsViewController.swift in Sources */,
+				7BD6C53822239622006E029C /* ProPatientDetailsViewController.swift in Sources */,
 				7BA7F248221F60040034B25C /* Persistencia.swift in Sources */,
-				7B6B63E22221F8940062BB75 /* ProfessionalAgendaViewController.swift in Sources */,
+				7B6B63E22221F8940062BB75 /* ProAgendaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +455,7 @@
 		};
 		7BD549BD2217C07B00DABA17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF6206938B19EF968DE99110 /* Pods-ProMed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +474,7 @@
 		};
 		7BD549BE2217C07B00DABA17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E372BFABF0B145FB2137EB63 /* Pods-ProMed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
