@@ -31,6 +31,8 @@ class ProNewAppointmentViewController: UIViewController {
         self.descriptionTextView.layer.borderWidth = 2
         self.descriptionTextView.layer.borderColor = UIColor.black.cgColor
         
+        self.scheduleButton.layer.cornerRadius = 8
+        
         
        
 

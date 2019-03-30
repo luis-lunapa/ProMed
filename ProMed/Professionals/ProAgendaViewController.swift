@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit
 
 class CitaTableViewCell: UITableViewCell {
 
@@ -38,7 +39,7 @@ class CitaTableViewCell: UITableViewCell {
 
 }
 
-class ProAgendaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProAgendaViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -46,21 +47,30 @@ class ProAgendaViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // MARK: Class members
     
-
-    var citas = ["Monica Perez",
-                 "Tommy Luna",
-                 "Ricardo Luna",
-                 "Junior Luna",
-                 "Melanie Luna",
-                 "Daisy Luna",
-                 "Judy Luna",
-                 "Muñeca Luna"]
+//
+//    /var citas = ["Monica Perez",
+//                 "Tommy Luna",
+//                 "Ricardo Luna",
+//                 "Junior Luna",
+//                 "Melanie Luna",
+//                 "Daisy Luna",
+//                 "Judy Luna",
+//                 "Muñeca Luna"]
+    
+    var citas = [Patient]()
+    
+    var dias = [Date]()
+    
+    var calendar: EKCalendar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.styleBars()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.setUpDates()
+        citas.append(Patient(name: "Muñeca Luna", birthDate: "16/06/2013"))
         // Do any additional setup after loading the view.
     }
 
@@ -69,23 +79,7 @@ class ProAgendaViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func addAppointmentPressed(_ sender: Any) {
     }
 
-    // MARK: TableView DataSource
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 86
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return citas.count
-    }
-
-    // swiftlint:disable force_cast
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "appointmentCell", for: indexPath) as! CitaTableViewCell
-
-        return cell
-    }
-
-    // MARK: TableView Delegate
+    
 
 
     // MARK: Common Setup
@@ -108,6 +102,34 @@ class ProAgendaViewController: UIViewController, UITableViewDelegate, UITableVie
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
+    
+    func setUpDates() {
+        
+        let days = 6 // Numero de dias a agregar
+        
+        let calendar = Calendar.current
+        let today = Date()
+        
+        
+        var sumaDias = 0
+        
+        for _ in 0...days {
+            let newDate = calendar.date(byAdding: Calendar.Component.day, value: sumaDias, to: today)
+        
+            
+            self.dias.append(newDate!)
+            
+            sumaDias += 1
+            
+        }
+
+        
+    }
+    
+    
+    // MARK: - General class functions
+    
+   
 
     /*
      // MARK: - Navigation
@@ -119,4 +141,137 @@ class ProAgendaViewController: UIViewController, UITableViewDelegate, UITableVie
      }
      */
 
+}
+
+extension ProAgendaViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    // MARK: TableView DataSource
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 86
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return citas.count
+    }
+    
+    // swiftlint:disable force_cast
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "appointmentCell", for: indexPath) as! CitaTableViewCell
+        
+        
+        
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.dias.count
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        let cal = Calendar.current
+        
+        var titulo = ""
+        
+        if cal.isDateInToday(self.dias[section]) {
+            titulo = "Hoy"
+            
+        } else if cal.isDateInTomorrow(self.dias[section]) {
+            
+            titulo = "Mañana"
+            
+        } else {
+            
+            titulo = self.getNameOfWeekDay(day: cal.component(Calendar.Component.weekday, from: self.dias[section]))
+            
+            
+        }
+        return titulo
+        
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 200)
+        let headerView = UIView(frame: frame)
+        headerView.backgroundColor = UIColor.white
+        let dayLabel = UILabel(frame: CGRect(x: 15, y: 0, width: view.bounds.width, height: CGFloat(50)))
+        
+        dayLabel.font = UIFont.systemFont(ofSize: 28, weight: UIFont.Weight.bold)
+        
+        dayLabel.text = self.getDayOfWeek(date: self.dias[section], section: section)
+        
+        let dateLabel = UILabel(frame: CGRect(x: 15, y: 30, width: view.bounds.width, height: CGFloat(50)))
+        
+        dateLabel.text = APIManager.shared.dateFormatDiaMesAnio().string(from: self.dias[section])
+        
+        dateLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.regular)
+        
+        
+       
+        headerView.addSubview(dayLabel)
+        headerView.addSubview(dateLabel)
+        
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 80
+    }
+    
+    // MARK: TableView Delegate
+    
+    
+    
+    // MARK: Helper functions for table
+    
+    func getNameOfWeekDay(day: Int) -> String {
+        
+        switch day {
+        case 1:
+            return "Sunday"
+        case 2:
+            return "Monday"
+        case 3:
+            return "Tuesday"
+        case 4:
+            return "Wednesday"
+        case 5:
+            return "Thrusday"
+        case 6:
+            return "Friday"
+        case 7:
+            return "Saturday"
+        default:
+            return "Later"
+        }
+        
+    }
+    
+    func getDayOfWeek(date: Date, section: Int) -> String {
+        let cal = Calendar.current
+        
+        if cal.isDateInToday(self.dias[section]) {
+            return "Today"
+            
+        } else if cal.isDateInTomorrow(self.dias[section]) {
+            
+            return "Tomorrow"
+            
+        } else {
+            
+            return self.getNameOfWeekDay(day: cal.component(Calendar.Component.weekday, from: self.dias[section]))
+            
+            
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
 }

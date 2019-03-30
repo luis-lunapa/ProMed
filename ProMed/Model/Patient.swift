@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/// Represents a patient and gives access to private information and records
 class Patient {
     
     var idPatient: String?

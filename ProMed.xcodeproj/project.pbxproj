@@ -13,6 +13,9 @@
 		7B6B63DB2221B75A0062BB75 /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DA2221B75A0062BB75 /* Patients.storyboard */; };
 		7B6B63DD2221B7660062BB75 /* Professionals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DC2221B7660062BB75 /* Professionals.storyboard */; };
 		7B6B63E22221F8940062BB75 /* ProAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */; };
+		7B9308D4224B36A3005B495A /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9308D3224B36A3005B495A /* Appointment.swift */; };
+		7B9308D6224B36CE005B495A /* PatientRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9308D5224B36CE005B495A /* PatientRecord.swift */; };
+		7B9308DA224B3745005B495A /* MedicalFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9308D9224B3745005B495A /* MedicalFile.swift */; };
 		7BA7F246221F5FB20034B25C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F245221F5FB20034B25C /* APIManager.swift */; };
 		7BA7F248221F60040034B25C /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F247221F60040034B25C /* Persistencia.swift */; };
 		7BA7F24A221F604C0034B25C /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F249221F604C0034B25C /* Professional.swift */; };
@@ -32,6 +35,9 @@
 		7B6B63DA2221B75A0062BB75 /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
 		7B6B63DC2221B7660062BB75 /* Professionals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professionals.storyboard; sourceTree = "<group>"; };
 		7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProAgendaViewController.swift; sourceTree = "<group>"; };
+		7B9308D3224B36A3005B495A /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		7B9308D5224B36CE005B495A /* PatientRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRecord.swift; sourceTree = "<group>"; };
+		7B9308D9224B3745005B495A /* MedicalFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalFile.swift; sourceTree = "<group>"; };
 		7BA7F245221F5FB20034B25C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7BA7F247221F60040034B25C /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
 		7BA7F249221F604C0034B25C /* Professional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
@@ -76,6 +82,9 @@
 			children = (
 				7BA7F249221F604C0034B25C /* Professional.swift */,
 				7B54095622224B1E00FA1B74 /* Patient.swift */,
+				7B9308D3224B36A3005B495A /* Appointment.swift */,
+				7B9308D5224B36CE005B495A /* PatientRecord.swift */,
+				7B9308D9224B3745005B495A /* MedicalFile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,9 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9308DA224B3745005B495A /* MedicalFile.swift in Sources */,
 				7BA7F246221F5FB20034B25C /* APIManager.swift in Sources */,
+				7B9308D6224B36CE005B495A /* PatientRecord.swift in Sources */,
 				7BA7F24A221F604C0034B25C /* Professional.swift in Sources */,
 				7B54095722224B1E00FA1B74 /* Patient.swift in Sources */,
+				7B9308D4224B36A3005B495A /* Appointment.swift in Sources */,
 				7BD549AC2217C07A00DABA17 /* AppDelegate.swift in Sources */,
 				7BD549C22217C2B900DABA17 /* LoginViewController.swift in Sources */,
 				7B540955222248EC00FA1B74 /* ProNewAppointmentViewController.swift in Sources */,

@@ -15,6 +15,15 @@ final class APIManager {
     static let shared = APIManager()
     let persistencia = Persistencia()
     
+    func dateFormatDiaMesAnio() -> DateFormatter {
+        var dateFormatter = DateFormatter()
+        dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        
+        return dateFormatter
+    }
+    
     
     
 }

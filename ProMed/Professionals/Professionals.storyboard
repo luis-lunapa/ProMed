@@ -530,7 +530,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QV0-Vi-OwO">
-                                <rect key="frame" x="0.0" y="187" width="414" height="626"/>
+                                <rect key="frame" x="0.0" y="160" width="414" height="653"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="appointmentCell" rowHeight="86" id="Zkf-ft-1Gi" customClass="CitaTableViewCell" customModule="ProMed" customModuleProvider="target">
@@ -610,7 +610,7 @@
                             <constraint firstItem="QV0-Vi-OwO" firstAttribute="leading" secondItem="Nee-ws-G3a" secondAttribute="leading" id="5Ws-3C-9Q5"/>
                             <constraint firstItem="yTi-fO-dN2" firstAttribute="top" secondItem="ow4-vS-ukq" secondAttribute="bottom" constant="2" id="5gq-4P-3pu"/>
                             <constraint firstItem="ow4-vS-ukq" firstAttribute="top" secondItem="Nee-ws-G3a" secondAttribute="top" id="Awx-mh-xpB"/>
-                            <constraint firstItem="QV0-Vi-OwO" firstAttribute="top" secondItem="yTi-fO-dN2" secondAttribute="bottom" constant="35" id="Dt9-vj-wf4"/>
+                            <constraint firstItem="QV0-Vi-OwO" firstAttribute="top" secondItem="yTi-fO-dN2" secondAttribute="bottom" constant="8" id="Dt9-vj-wf4"/>
                             <constraint firstItem="QV0-Vi-OwO" firstAttribute="bottom" secondItem="Nee-ws-G3a" secondAttribute="bottom" id="Ezj-4g-bU3"/>
                             <constraint firstItem="Feb-u5-nxY" firstAttribute="top" secondItem="Nee-ws-G3a" secondAttribute="top" constant="5" id="HAA-Ja-8N9"/>
                             <constraint firstItem="ow4-vS-ukq" firstAttribute="leading" secondItem="Nee-ws-G3a" secondAttribute="leading" constant="20" id="J3N-Lq-gGU"/>
