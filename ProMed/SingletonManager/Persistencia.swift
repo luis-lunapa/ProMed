@@ -8,8 +8,8 @@
 
 import Foundation
 final class Persistencia {
-    var professional: Professional?
-    var patient: Patient?
+    var currentUser: Professional?
+   
     
     
 }

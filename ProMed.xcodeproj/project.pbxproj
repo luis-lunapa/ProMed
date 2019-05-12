@@ -10,10 +10,12 @@
 		4F4308DB79CA908A99E66E04 /* Pods_ProMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542996138600E6CD9174983 /* Pods_ProMed.framework */; };
 		7B540955222248EC00FA1B74 /* ProNewAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B540954222248EC00FA1B74 /* ProNewAppointmentViewController.swift */; };
 		7B54095722224B1E00FA1B74 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54095622224B1E00FA1B74 /* Patient.swift */; };
-		7B6A7687224EFF6600F4E5BC /* dataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A7685224EFF6600F4E5BC /* dataBase.xcdatamodeld */; };
 		7B6B63DB2221B75A0062BB75 /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DA2221B75A0062BB75 /* Patients.storyboard */; };
 		7B6B63DD2221B7660062BB75 /* Professionals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DC2221B7660062BB75 /* Professionals.storyboard */; };
 		7B6B63E22221F8940062BB75 /* ProAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */; };
+		7B714D922288956400D70F20 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B714D912288956400D70F20 /* Networking.swift */; };
+		7B714D942288960F00D70F20 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B714D932288960F00D70F20 /* SwiftyJSON.swift */; };
+		7B714D9622889A0B00D70F20 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B714D9522889A0B00D70F20 /* OS.swift */; };
 		7B9308D4224B36A3005B495A /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9308D3224B36A3005B495A /* Appointment.swift */; };
 		7B9308D6224B36CE005B495A /* PatientRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9308D5224B36CE005B495A /* PatientRecord.swift */; };
 		7B9308DA224B3745005B495A /* MedicalFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9308D9224B3745005B495A /* MedicalFile.swift */; };
@@ -33,10 +35,12 @@
 /* Begin PBXFileReference section */
 		7B540954222248EC00FA1B74 /* ProNewAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProNewAppointmentViewController.swift; sourceTree = "<group>"; };
 		7B54095622224B1E00FA1B74 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
-		7B6A7686224EFF6600F4E5BC /* dataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataBase.xcdatamodel; sourceTree = "<group>"; };
 		7B6B63DA2221B75A0062BB75 /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
 		7B6B63DC2221B7660062BB75 /* Professionals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professionals.storyboard; sourceTree = "<group>"; };
 		7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProAgendaViewController.swift; sourceTree = "<group>"; };
+		7B714D912288956400D70F20 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		7B714D932288960F00D70F20 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		7B714D9522889A0B00D70F20 /* OS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
 		7B9308D3224B36A3005B495A /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		7B9308D5224B36CE005B495A /* PatientRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRecord.swift; sourceTree = "<group>"; };
 		7B9308D9224B3745005B495A /* MedicalFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalFile.swift; sourceTree = "<group>"; };
@@ -86,7 +90,6 @@
 				7B54095622224B1E00FA1B74 /* Patient.swift */,
 				7B9308D3224B36A3005B495A /* Appointment.swift */,
 				7B9308D5224B36CE005B495A /* PatientRecord.swift */,
-				7B6A7685224EFF6600F4E5BC /* dataBase.xcdatamodeld */,
 				7B9308D9224B3745005B495A /* MedicalFile.swift */,
 			);
 			path = Model;
@@ -96,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				7BA7F245221F5FB20034B25C /* APIManager.swift */,
+				7B714D912288956400D70F20 /* Networking.swift */,
 				7BA7F247221F60040034B25C /* Persistencia.swift */,
+				7B714D9522889A0B00D70F20 /* OS.swift */,
 			);
 			path = SingletonManager;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				7BD549AB2217C07A00DABA17 /* AppDelegate.swift */,
 				7BD549C12217C2B900DABA17 /* LoginViewController.swift */,
+				7B714D932288960F00D70F20 /* SwiftyJSON.swift */,
 				7B6B63E32221F89A0062BB75 /* Professionals */,
 				7B6B63DF2221F0620062BB75 /* SingletonManager */,
 				7B6B63DE2221F04F0062BB75 /* Model */,
@@ -316,9 +322,10 @@
 				7B9308DA224B3745005B495A /* MedicalFile.swift in Sources */,
 				7BA7F246221F5FB20034B25C /* APIManager.swift in Sources */,
 				7B9308D6224B36CE005B495A /* PatientRecord.swift in Sources */,
+				7B714D922288956400D70F20 /* Networking.swift in Sources */,
+				7B714D9622889A0B00D70F20 /* OS.swift in Sources */,
 				7BA7F24A221F604C0034B25C /* Professional.swift in Sources */,
 				7B54095722224B1E00FA1B74 /* Patient.swift in Sources */,
-				7B6A7687224EFF6600F4E5BC /* dataBase.xcdatamodeld in Sources */,
 				7B9308D4224B36A3005B495A /* Appointment.swift in Sources */,
 				7BD549AC2217C07A00DABA17 /* AppDelegate.swift in Sources */,
 				7BD549C22217C2B900DABA17 /* LoginViewController.swift in Sources */,
@@ -326,6 +333,7 @@
 				7BD549C02217C24400DABA17 /* Utilidades.swift in Sources */,
 				7BD6C53A2223A46D006E029C /* ProMyPatientsViewController.swift in Sources */,
 				7BD6C53822239622006E029C /* ProPatientDetailsViewController.swift in Sources */,
+				7B714D942288960F00D70F20 /* SwiftyJSON.swift in Sources */,
 				7BA7F248221F60040034B25C /* Persistencia.swift in Sources */,
 				7B6B63E22221F8940062BB75 /* ProAgendaViewController.swift in Sources */,
 			);
@@ -529,19 +537,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7B6A7685224EFF6600F4E5BC /* dataBase.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7B6A7686224EFF6600F4E5BC /* dataBase.xcdatamodel */,
-			);
-			currentVersion = 7B6A7686224EFF6600F4E5BC /* dataBase.xcdatamodel */;
-			path = dataBase.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7BD549A02217C07A00DABA17 /* Project object */;
 }

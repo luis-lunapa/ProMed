@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class LoginViewController: UIViewController {
     
@@ -42,17 +43,52 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginPressed(_ sender: Any) {
         
-        let storyboard = UIStoryboard.init(name: "Professionals", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "proBase")
-        self.present(vc, animated: true)
+        if self.userNameTextField.text! == "" {
+            Utilidades.showAlert(title: "Error", text: "Provide your email", sender: self)
+            return
+        }
+        
+        if self.passwordTextField.text! == "" {
+            Utilidades.showAlert(title: "Error", text: "Provide your password", sender: self)
+            return
+        }
+        
+        let email    = self.userNameTextField.text!
+        let password = self.passwordTextField.text!
+        
+        APIManager.shared.networking.login(email: email, password: password).done {
+            user in
+            
+            APIManager.shared.persistencia.currentUser = user
+            /// CoreData code
+            
+            
+            let storyboard = UIStoryboard.init(name: "Professionals", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "proBase")
+            self.present(viewController, animated: true)
+           
+            
+            
+            
+            
+        }.catch {
+            error in
+            let error = error as NSError
+            
+            Utilidades.showAlert(title: "Oops", text: error.userInfo["msg"] as? String, sender: self)
+                
+                
+                
+                
+        }
+        
+        
+        
+        
         
     }
     
-    private func validateData() -> Bool {
-        var ready = true
-        
-        return ready
-    }
+
     
 
     

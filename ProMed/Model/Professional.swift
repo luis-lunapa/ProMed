@@ -9,13 +9,24 @@
 import Foundation
 class Professional {
     
-    var name: String
+    var idUsuario: String
+    var nombre: String
+    var email: String
+    var especialidad: String
+    var costo: Double
     
-    lazy var recentPatients = [Patient]()
+    
+    var recentPatients = [Patient]()
     
     
-    init (name: String) {
-        self.name = name
+    init (idUsuario: String, nombre: String, email: String, especialidad: String, costo: Double) {
+        
+        self.idUsuario    = idUsuario
+        self.nombre       = nombre
+        self.email        = email
+        self.especialidad = especialidad
+        self.costo        = costo
+       
     }
     
     

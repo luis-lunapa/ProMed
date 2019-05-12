@@ -71,7 +71,7 @@ $result = $db->querySelect(
 );
 //$db->printQuery();
 $user =  $result->fetch_assoc();
-$idUser = $user['idUser'];
+$idUser = $user['idUsuario'];
 
 if($user) {
 
@@ -116,12 +116,16 @@ if($user) {
 // }
 // $idLogin = $result;
 
-$json['status']                 = '200';
-$json['msg']                    = 'Datos correctos';
-$json['data']['token']          = $newToken;
-$json['data']['idUser']         = $idUser;
-$json['data']['name']           = $user['name'];
-$json['data']['email']          = $user['email'];
+$json['status']                     = '200';
+$json['msg']                        = 'Datos correctos';
+
+$json['data']['idUser']             = $idUser;
+$json['data']['nombre']             = $user['nombre'];
+$json['data']['email']              = $user['email'];
+$json['data']['especialidad']       = $user['especialidad'];
+$json['data']['costo']              = $user['costo'];
+$json['data']['username']           = $user['username'];
+
 
 
 
