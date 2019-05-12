@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Scv-aW-kmP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Scv-aW-kmP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +50,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" textContentType="username"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Jtg-JA-Ep6">
                                         <rect key="frame" x="0.0" y="83" width="30" height="30"/>
@@ -92,26 +92,13 @@
                                     <constraint firstAttribute="height" constant="128" id="hXJ-yR-kJW"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OP-Kw-hVh">
-                                <rect key="frame" x="86" y="439" width="203" height="55"/>
-                                <color key="backgroundColor" red="0.3739209771" green="0.48071265707534239" blue="0.70980817080000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="6Y2-Sv-ZzI"/>
-                                    <constraint firstAttribute="width" constant="203" id="Ta4-Ok-oEQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Create Account"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470587" green="0.27667957544326782" blue="0.36863940954208374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="3OP-Kw-hVh" firstAttribute="centerX" secondItem="AGh-CJ-2DP" secondAttribute="centerX" id="6O4-bu-KZW"/>
                             <constraint firstItem="d7i-nn-bPb" firstAttribute="centerY" secondItem="AGh-CJ-2DP" secondAttribute="centerY" constant="-82" id="LeR-S3-roj"/>
                             <constraint firstItem="3de-PE-xZZ" firstAttribute="top" secondItem="UiX-F7-1Ve" secondAttribute="top" constant="30" id="aVR-qZ-pO1"/>
                             <constraint firstItem="3de-PE-xZZ" firstAttribute="centerX" secondItem="AGh-CJ-2DP" secondAttribute="centerX" id="cDM-3B-Htk"/>
                             <constraint firstItem="d7i-nn-bPb" firstAttribute="centerX" secondItem="AGh-CJ-2DP" secondAttribute="centerX" id="hIe-3q-Vr3"/>
-                            <constraint firstItem="3OP-Kw-hVh" firstAttribute="top" secondItem="Fkp-Ds-EFZ" secondAttribute="bottom" constant="44" id="hsR-tV-8AZ"/>
                             <constraint firstItem="Fkp-Ds-EFZ" firstAttribute="centerX" secondItem="AGh-CJ-2DP" secondAttribute="centerX" id="qlw-86-vuL"/>
                             <constraint firstItem="Fkp-Ds-EFZ" firstAttribute="centerY" secondItem="AGh-CJ-2DP" secondAttribute="centerY" constant="34" id="yAW-CW-wCf"/>
                         </constraints>
@@ -125,12 +112,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Nc-7i-7jB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1290.4000000000001" y="154.27286356821591"/>
+            <point key="canvasLocation" x="-1305" y="166"/>
         </scene>
     </scenes>
     <resources>
-        <image name="email" width="48" height="48"/>
+        <image name="email" width="64" height="64"/>
         <image name="icon" width="300" height="251"/>
-        <image name="lock" width="48" height="48"/>
+        <image name="lock" width="64" height="64"/>
     </resources>
 </document>

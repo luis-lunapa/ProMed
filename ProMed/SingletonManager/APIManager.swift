@@ -14,6 +14,7 @@ final class APIManager {
     
     static let shared = APIManager()
     let persistencia = Persistencia()
+    let networking: Networking = Networking()
     
     func dateFormatDiaMesAnio() -> DateFormatter {
         var dateFormatter = DateFormatter()

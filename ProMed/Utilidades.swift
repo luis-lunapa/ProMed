@@ -9,8 +9,22 @@
 import Foundation
 import UIKit
 
-class Utilidades {
+final class Utilidades {
     
+    static func showAlert(title: String, text: String?, sender: UIViewController) {
+        
+        let alert = UIAlertController.init(title: title, message: text, preferredStyle: .alert)
+        
+        let action = UIAlertAction.init(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        
+  
+        sender.present(alert, animated: true)
+        
+        
+        
+    }
     
     
     
