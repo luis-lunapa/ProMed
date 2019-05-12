@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +29,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="119" id="pXI-Dd-g1T">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="patientCell" rowHeight="119" id="pXI-Dd-g1T" customClass="PatientTableViewCell" customModule="ProMed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="414" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pXI-Dd-g1T" id="dNb-kT-eJj">
@@ -64,8 +64,8 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Última Consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvN-2X-goe">
-                                                            <rect key="frame" x="112" y="69" width="122" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NSS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvN-2X-goe">
+                                                            <rect key="frame" x="112" y="69" width="34" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -75,6 +75,7 @@
                                                     <constraints>
                                                         <constraint firstItem="AIa-ki-cq5" firstAttribute="leading" secondItem="wuz-JV-FXg" secondAttribute="trailing" constant="13" id="BcW-Rt-0La"/>
                                                         <constraint firstItem="wuz-JV-FXg" firstAttribute="centerY" secondItem="FsT-KP-3C9" secondAttribute="centerY" id="Pa3-z5-BnP"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C5v-m3-s3Y" secondAttribute="trailing" constant="10" id="Ysr-d1-vni"/>
                                                         <constraint firstItem="C5v-m3-s3Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oof-d0-oRJ" secondAttribute="trailing" constant="5" id="b1d-Ih-apL"/>
                                                         <constraint firstItem="gvN-2X-goe" firstAttribute="top" secondItem="oof-d0-oRJ" secondAttribute="bottom" constant="8" id="c7Y-MJ-idA"/>
                                                         <constraint firstItem="AIa-ki-cq5" firstAttribute="top" secondItem="FsT-KP-3C9" secondAttribute="top" constant="8" id="fGd-5K-IkZ"/>
@@ -94,6 +95,13 @@
                                                 <constraint firstItem="FsT-KP-3C9" firstAttribute="leading" secondItem="dNb-kT-eJj" secondAttribute="leading" constant="4" id="rcb-V1-pZu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="patientAge" destination="C5v-m3-s3Y" id="AoB-c2-q52"/>
+                                            <outlet property="patientGender" destination="oof-d0-oRJ" id="nha-Jc-TUE"/>
+                                            <outlet property="patientImg" destination="wuz-JV-FXg" id="Rnr-JQ-qPt"/>
+                                            <outlet property="patientNSS" destination="gvN-2X-goe" id="BEb-oW-JYY"/>
+                                            <outlet property="patientName" destination="AIa-ki-cq5" id="tgz-t5-8mR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -802,17 +810,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="96" height="96"/>
+        <image name="add" width="128" height="128"/>
         <image name="addRecord" width="404" height="448"/>
-        <image name="backArrow" width="48" height="48"/>
+        <image name="backArrow" width="64" height="64"/>
         <image name="calendar" width="448" height="448"/>
-        <image name="calendarTab" width="33" height="33"/>
+        <image name="calendarTab" width="22" height="22"/>
         <image name="help" width="448" height="448"/>
-        <image name="homeTab" width="33" height="33"/>
-        <image name="patientsTab" width="33" height="33"/>
+        <image name="homeTab" width="22" height="22"/>
+        <image name="patientsTab" width="22" height="22"/>
         <image name="profileInfo" width="803" height="802"/>
         <image name="records" width="762" height="889"/>
         <image name="share" width="448" height="448"/>
-        <image name="user" width="384" height="384"/>
+        <image name="user" width="512" height="512"/>
     </resources>
 </document>

@@ -13,4 +13,5 @@ extension OSLog {
     private static var subsystem = Bundle.main.bundleIdentifier!
     
     static let login = OSLog(subsystem: subsystem, category: "login")
+    static let getData = OSLog(subsystem: subsystem, category: "getData")
 }

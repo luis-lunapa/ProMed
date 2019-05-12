@@ -70,7 +70,7 @@ class ProAgendaViewController: UIViewController {
         self.tableView.dataSource = self
         
         self.setUpDates()
-        citas.append(Patient(name: "Muñeca Luna", birthDate: "16/06/2013"))
+        //citas.append(Patient(name: "Muñeca Luna", birthDate: "16/06/2013"))
         // Do any additional setup after loading the view.
     }
 

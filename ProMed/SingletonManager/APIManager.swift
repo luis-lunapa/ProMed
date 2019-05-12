@@ -25,6 +25,15 @@ final class APIManager {
         return dateFormatter
     }
     
+    func dateFormatDiaMesAnioSQL() -> DateFormatter {
+        var dateFormatter = DateFormatter()
+        dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        
+        return dateFormatter
+    }
+    
     
     
 }

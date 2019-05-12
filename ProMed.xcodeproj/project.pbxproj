@@ -16,6 +16,7 @@
 		7B714D922288956400D70F20 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B714D912288956400D70F20 /* Networking.swift */; };
 		7B714D942288960F00D70F20 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B714D932288960F00D70F20 /* SwiftyJSON.swift */; };
 		7B714D9622889A0B00D70F20 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B714D9522889A0B00D70F20 /* OS.swift */; };
+		7B714D9A2288B1B300D70F20 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B714D992288B1B300D70F20 /* PatientTableViewCell.swift */; };
 		7B9308D4224B36A3005B495A /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9308D3224B36A3005B495A /* Appointment.swift */; };
 		7B9308D6224B36CE005B495A /* PatientRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9308D5224B36CE005B495A /* PatientRecord.swift */; };
 		7B9308DA224B3745005B495A /* MedicalFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9308D9224B3745005B495A /* MedicalFile.swift */; };
@@ -41,6 +42,7 @@
 		7B714D912288956400D70F20 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		7B714D932288960F00D70F20 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		7B714D9522889A0B00D70F20 /* OS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
+		7B714D992288B1B300D70F20 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		7B9308D3224B36A3005B495A /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		7B9308D5224B36CE005B495A /* PatientRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRecord.swift; sourceTree = "<group>"; };
 		7B9308D9224B3745005B495A /* MedicalFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalFile.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				7BD6C5392223A46D006E029C /* ProMyPatientsViewController.swift */,
 				7B540954222248EC00FA1B74 /* ProNewAppointmentViewController.swift */,
 				7BD6C53722239622006E029C /* ProPatientDetailsViewController.swift */,
+				7B714D992288B1B300D70F20 /* PatientTableViewCell.swift */,
 			);
 			path = Professionals;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				7B9308D6224B36CE005B495A /* PatientRecord.swift in Sources */,
 				7B714D922288956400D70F20 /* Networking.swift in Sources */,
 				7B714D9622889A0B00D70F20 /* OS.swift in Sources */,
+				7B714D9A2288B1B300D70F20 /* PatientTableViewCell.swift in Sources */,
 				7BA7F24A221F604C0034B25C /* Professional.swift in Sources */,
 				7B54095722224B1E00FA1B74 /* Patient.swift in Sources */,
 				7B9308D4224B36A3005B495A /* Appointment.swift in Sources */,

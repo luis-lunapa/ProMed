@@ -36,6 +36,20 @@ final class Utilidades {
     
 }
 
+struct Genero {
+    static func getGenero(gen: Int) -> String {
+        
+        if gen == 0 {
+            return "Masculino"
+        } else if gen == 1 {
+            return "Femenino"
+        }
+        
+        return "No definido"
+    }
+    
+}
+
 extension UITextField {
     
     func setBottomLine(borderColor: UIColor) {
