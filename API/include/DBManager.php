@@ -5,7 +5,7 @@ class DBManager {
     ///==================================================
     
     private $user = "u111876580_prome"; // Usuario de bd
-    private $password = "Hh@-240897"; // Password bd
+    private $password = "ProMed12345"; // Password bd
     private $db = "u111876580_prome"; // Nombre db
     private $host = "localhost"; // Host db
 
