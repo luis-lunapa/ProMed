@@ -79,7 +79,7 @@ if($user) {
 
 } else {
     $json['msg']            = 'Usuario o contraseña incorrectos';
-    $json['status']         = 600;
+    $json['status']         = 605;
     echo(json_encode($json));
     exit;
 

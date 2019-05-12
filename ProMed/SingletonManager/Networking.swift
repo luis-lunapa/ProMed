@@ -44,7 +44,7 @@ final class Networking {
     
     func login(email: String, password: String) -> Promise<Professional> {
         
-        let errorMessage = "Our server can not authenticate your account right now, try again"
+        var errorMessage = "Our server can not authenticate your account right now, try again"
         
         return Promise {
             seal in
@@ -65,6 +65,10 @@ final class Networking {
                     
                     let status = jsonData["status"].intValue
                     if status != 200 {
+                        if status == 605 {
+                            errorMessage = "Incorrect user or password"
+                            
+                        }
                         
                        
                         seal.reject(NSError(domain: "login", code: 0, userInfo: ["msg": errorMessage]))
