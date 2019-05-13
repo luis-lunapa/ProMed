@@ -6,7 +6,7 @@
    *	Este web service regresa los datos de login
    *
    *	Parámetros: 
-   *    - token
+   *    - idUsuario
 
    *
    *	Devuelve un JSON con {status, msg, data}
@@ -33,89 +33,69 @@ if(isset($_GET['debug'])){
 }
 
 
-$token = "";
-if(!isset($_GET['token']) || trim($_GET['token']) == "") {
+
+$idUsuario = "";
+if(!isset($_GET['idUsuario']) || trim($_GET['idUsuario']) == "") {
     $json['status'] 	= 602;
-    $json['msg']		= "No se recibió token con autorización";
+    $json['msg']		= "No se recibió idUsuario ";
     echo json_encode($json);
     exit;
 
 }
 else {
-    $token = $_GET['token'];
-}
-
-$idUser = "";
-if(!isset($_GET['idUser']) || trim($_GET['idUser']) == "") {
-    $json['status'] 	= 602;
-    $json['msg']		= "No se recibió idUser ";
-    echo json_encode($json);
-    exit;
-
-}
-else {
-    $idUser = $_GET['idUser'];
+    $idUsuario = $_GET['idUsuario'];
 }
 
 
-$valid = $db->querySelect(
-    "Se verifica que el token recibido es válido",
-    "SELECT
-       *
-    FROM
-        Login l 
-        
-    WHERE
-        token = '$token' AND
-        status = 'active'
-    "
-);
 
-$isValid = $valid->fetch_assoc();
-
-if (!isset($isValid)) {
-    $json['status'] = '605';
-    $json['msg']    = 'No tiene permiso de realizar esta petición';
-    echo(json_encode($json));
-    exit;
-
-}
 
 
 $result = $db->querySelect(
-    "Se obtienen todos datos de usuarios",
+    "Se obtienen todos datos de pacientes",
     "SELECT
-        u.name,
-        u.email,
-        u.public_key,
-        u.idUser
+        p.idPaciente,
+        p.nombre,
+        p.email,
+        p.telefono,
+        p.nacimiento,
+        p.genero,
+        p.descripcion,
+        p.nss
+
     FROM
-       User u 
-    WHERE 
-        u.idUser != $idUser
+       Paciente p INNER JOIN Atendiendo a
+    WHERE
+        a.idUsuario = $idUsuario
+
 
     "
 );
+
 
 
 
 if(!isset($result)) {
     $json['status'] = '605';
-    $json['msg']    = 'No se obtuvieron usuarios :O';
+    $json['msg']    = 'No se obtuvieron pacientes :O';
     echo(json_encode($json));
     exit;
 
 }
 
-$usuarios = array();
+$pacientes = array();
 
 while($row = $result->fetch_assoc()) {
-array_push($usuarios, array(
+array_push($pacientes, array(
 
-'name' => $row['name'],
-'email' => $row['email'],
-'public_key' => $row['public_key'],
-'idUser' => $row['idUser']
+'idPaciente'    => $row['idPaciente'],
+'nombre'        => $row['nombre'],
+'email'         => $row['email'],
+'telefono'      => $row['telefono'],
+'nacimiento'    => $row['nacimiento'],
+'genero'        => $row['genero'],
+'descripcion'   => $row['descripcion'],
+'nss'           => $row['nss'],
+
 
 
 )
@@ -130,7 +110,7 @@ array_push($usuarios, array(
 
 $json['status']                 = '200';
 $json['msg']                    = 'Datos obtenidos correctamente';
-$json['data'] = $usuarios;
+$json['data'] = $pacientes;
 
 echo(json_encode($json));
     

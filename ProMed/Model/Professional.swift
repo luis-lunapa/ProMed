@@ -7,19 +7,22 @@
 //
 
 import Foundation
-class Professional {
+import RealmSwift
+
+@objcMembers class Professional: Object {
     
-    var idUsuario: String
-    var nombre: String
-    var email: String
-    var especialidad: String
-    var costo: Double
+    dynamic var idUsuario: String = ""
+    dynamic var nombre: String = ""
+    dynamic var email: String = ""
+    dynamic var especialidad: String = ""
+    dynamic var costo: Double = 0.0
     
     
-    var recentPatients = [Patient]()
+  //  @objc dynamic var recentPatients = [Patient]()
     
     
-    init (idUsuario: String, nombre: String, email: String, especialidad: String, costo: Double) {
+    convenience init (idUsuario: String, nombre: String, email: String, especialidad: String, costo: Double) {
+        self.init()
         
         self.idUsuario    = idUsuario
         self.nombre       = nombre
@@ -27,6 +30,20 @@ class Professional {
         self.especialidad = especialidad
         self.costo        = costo
        
+    }
+    
+    func save() {
+        if let realm = APIManager.shared.persistencia.realmBD() {
+            if !realm.objects(Professional.self).isEmpty {
+                
+                try? realm.write {
+                    realm.deleteAll()
+                }
+            }
+            try? realm.write {
+                realm.add(self)
+            }
+        }
     }
     
     

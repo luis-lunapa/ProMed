@@ -21,15 +21,28 @@ class ProPatientDetailsViewController: UIViewController {
     
     @IBOutlet weak var backButtonView: UIView!
     
+    @IBOutlet weak var patientName: UILabel!
+    
+    @IBOutlet weak var nssLabel: UILabel!
     
     
+    var patient: Patient!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpViews()
+        self.loadData()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func loadData() {
+        
+        
+        self.patientName.text = self.patient.nombre
+        self.nssLabel.text = self.patient.nss
+        
     }
     
     func setUpViews() {
