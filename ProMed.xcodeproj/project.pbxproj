@@ -10,6 +10,8 @@
 		4F4308DB79CA908A99E66E04 /* Pods_ProMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542996138600E6CD9174983 /* Pods_ProMed.framework */; };
 		7B540955222248EC00FA1B74 /* ProNewAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B540954222248EC00FA1B74 /* ProNewAppointmentViewController.swift */; };
 		7B54095722224B1E00FA1B74 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54095622224B1E00FA1B74 /* Patient.swift */; };
+		7B5F7ACE2288E93200A5FC14 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F7ACD2288E93200A5FC14 /* LaunchScreenViewController.swift */; };
+		7B5F7AD02288EA4400A5FC14 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F7ACF2288EA4400A5FC14 /* LoginManager.swift */; };
 		7B6B63DB2221B75A0062BB75 /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DA2221B75A0062BB75 /* Patients.storyboard */; };
 		7B6B63DD2221B7660062BB75 /* Professionals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DC2221B7660062BB75 /* Professionals.storyboard */; };
 		7B6B63E22221F8940062BB75 /* ProAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		7B540954222248EC00FA1B74 /* ProNewAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProNewAppointmentViewController.swift; sourceTree = "<group>"; };
 		7B54095622224B1E00FA1B74 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		7B5F7ACD2288E93200A5FC14 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		7B5F7ACF2288EA4400A5FC14 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		7B6B63DA2221B75A0062BB75 /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
 		7B6B63DC2221B7660062BB75 /* Professionals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professionals.storyboard; sourceTree = "<group>"; };
 		7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProAgendaViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				7B714D912288956400D70F20 /* Networking.swift */,
 				7BA7F247221F60040034B25C /* Persistencia.swift */,
 				7B714D9522889A0B00D70F20 /* OS.swift */,
+				7B5F7ACF2288EA4400A5FC14 /* LoginManager.swift */,
 			);
 			path = SingletonManager;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			children = (
 				7BD549AB2217C07A00DABA17 /* AppDelegate.swift */,
 				7BD549C12217C2B900DABA17 /* LoginViewController.swift */,
+				7B5F7ACD2288E93200A5FC14 /* LaunchScreenViewController.swift */,
 				7B714D932288960F00D70F20 /* SwiftyJSON.swift */,
 				7B6B63E32221F89A0062BB75 /* Professionals */,
 				7B6B63DF2221F0620062BB75 /* SingletonManager */,
@@ -322,10 +328,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5F7ACE2288E93200A5FC14 /* LaunchScreenViewController.swift in Sources */,
 				7B9308DA224B3745005B495A /* MedicalFile.swift in Sources */,
 				7BA7F246221F5FB20034B25C /* APIManager.swift in Sources */,
 				7B9308D6224B36CE005B495A /* PatientRecord.swift in Sources */,
 				7B714D922288956400D70F20 /* Networking.swift in Sources */,
+				7B5F7AD02288EA4400A5FC14 /* LoginManager.swift in Sources */,
 				7B714D9622889A0B00D70F20 /* OS.swift in Sources */,
 				7B714D9A2288B1B300D70F20 /* PatientTableViewCell.swift in Sources */,
 				7BA7F24A221F604C0034B25C /* Professional.swift in Sources */,

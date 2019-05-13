@@ -60,7 +60,9 @@ class LoginViewController: UIViewController {
             user in
             
             APIManager.shared.persistencia.currentUser = user
-            /// CoreData code
+            /// Save object in database
+            
+            user.save()
             
             
             let storyboard = UIStoryboard.init(name: "Professionals", bundle: nil)

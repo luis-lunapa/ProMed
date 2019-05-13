@@ -14,4 +14,5 @@ extension OSLog {
     
     static let login = OSLog(subsystem: subsystem, category: "login")
     static let getData = OSLog(subsystem: subsystem, category: "getData")
+    static let reLogin = OSLog(subsystem: subsystem, category: "reLogin")
 }
