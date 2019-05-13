@@ -11,16 +11,14 @@ import Foundation
 /// Appointment of a health professional and a patient in a given date
 class Appointment {
     
-    var patient: Patient
-    var professional: Professional
+    var idPatient: String
     var date: Date?
-    var notes: String
+    var description: String
     
-    init(patient: Patient, professional: Professional, date: String, notes: String) {
-        self.patient = patient
-        self.professional = professional
-        self.date = APIManager.shared.dateFormatDiaMesAnio().date(from: date)
-        self.notes = notes
+    init(idPatient: String, date: Date, description: String) {
+        self.idPatient = idPatient
+        self.date = date
+        self.description = description
     }
     
 }

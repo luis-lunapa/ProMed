@@ -34,6 +34,15 @@ final class APIManager {
         return dateFormatter
     }
     
+   
+    func dateFormatDiaMesAnioHourMinuteSecondSQL() -> DateFormatter {
+        var dateFormatter = DateFormatter()
+        dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:SS"
+        
+        
+        return dateFormatter
+    }
     
     
 }
