@@ -87,7 +87,7 @@ extension ProMyPatientsViewController: UITableViewDelegate, UITableViewDataSourc
         cell.patientName.text = patients[indexPath.row].nombre
         cell.patientAge.text = APIManager.shared.dateFormatDiaMesAnioSQL().string(from: patients[indexPath.row].nacimiento)
         cell.patientNSS.text = patients[indexPath.row].nss
-        cell.patientGender.text = patients[indexPath.row].nombre
+        cell.patientGender.text = patients[indexPath.row].genero
         cell.patientImg.image = UIImage(named: "user")
         
         
@@ -98,6 +98,23 @@ extension ProMyPatientsViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 119
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        var selectedUser: Patient = self.patients[indexPath.row]
+        if self.isSearching {
+            selectedUser = self.searchPatients[indexPath.row]
+        }
+        
+        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "patientDetails") as! ProPatientDetailsViewController
+        viewController.patient = selectedUser
+        self.show(viewController, sender: self)
+        
+        
+        
+        
+        
     }
     
     

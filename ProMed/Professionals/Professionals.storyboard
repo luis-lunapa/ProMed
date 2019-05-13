@@ -116,11 +116,7 @@
                         <viewLayoutGuide key="safeArea" id="4B4-Sf-7LC"/>
                     </view>
                     <navigationItem key="navigationItem" id="dM0-1K-NsH">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="UiE-cy-bRV">
-                            <connections>
-                                <segue destination="OeU-6v-MRm" kind="show" id="am3-Ni-hwq"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="U3G-kX-UYL"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="x6F-rQ-RPa" id="JEE-K6-kTK"/>
@@ -139,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJ1-D6-hQj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="-44" width="414" height="300"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="kBL-tm-6QU">
                                         <rect key="frame" x="147" y="84" width="120" height="120"/>
@@ -173,7 +169,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrS-e7-RoO">
-                                <rect key="frame" x="9" y="326" width="396" height="368"/>
+                                <rect key="frame" x="9" y="282" width="396" height="368"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dR5-oL-buF">
                                         <rect key="frame" x="12" y="30" width="376" height="150"/>
@@ -423,6 +419,8 @@
                         <outlet property="checkRecordView" destination="1RX-nA-q0R" id="EGh-F6-car"/>
                         <outlet property="emergencyView" destination="xy1-nf-ZaH" id="YZJ-UE-BEj"/>
                         <outlet property="generalInfoView" destination="PcU-P6-h1x" id="xWa-Cw-UZA"/>
+                        <outlet property="nssLabel" destination="7uc-Ao-zOL" id="JMd-BE-PR4"/>
+                        <outlet property="patientName" destination="GSD-qT-IEw" id="AsL-FD-y9a"/>
                         <outlet property="scheduleView" destination="ujO-QN-Jid" id="EK3-LX-rOK"/>
                         <outlet property="shareView" destination="IjA-MJ-w68" id="HsA-qX-wtQ"/>
                     </connections>
