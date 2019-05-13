@@ -288,27 +288,26 @@ final class Networking {
                         
                     }
                     
-                    let jsonPatients = jsonData["data"].arrayValue
+                    let jsonAppointments = jsonData["data"].arrayValue
                     
-                    for patient in jsonPatients {
+                    for app in jsonAppointments {
                         
-                        let idPaciente = patient["idPaciente"].stringValue
-                        let nombre = patient["nombre"].stringValue
-                        let email = patient["email"].stringValue
-                        let telefono = patient["telefono"].stringValue
-                        let nacimiento = patient["nacimiento"].stringValue
-                        let genero = patient["genero"].intValue
-                        let descripcion = patient["descripcion"].stringValue
-                        let nss = patient["nss"].stringValue
+                        let idAppointment = app["idAppointment"].stringValue
+                        let idPaciente    = app["idPaciente"].stringValue
+                        let date          = app["date"].stringValue
+                        let description   = app["description"].stringValue
                         
-                        let gen = Genero.getGenero(gen: genero)
+                        let nombre        = app["nombre"].stringValue
+                        let nss           = app["nss"].stringValue
                         
-                        let date = APIManager.shared.dateFormatDiaMesAnioSQL().date(from: nacimiento)
+                
+                       
+                        let realDate = APIManager.shared.dateFormatDiaMesAnioHourMinuteSecondSQL().date(from: date)
                         
-                        let patient = Patient.init(idPaciente: idPaciente, nombre: nombre, email: email, telefono: telefono, nacimiento: date ?? Date(), genero: gen, nss: nss, descripcion: descripcion)
+                        let appoint = Appointment.init(idAppointment: idAppointment, idPatient: idPaciente, date: realDate ?? Date(), description: description, nombrePaciente: nombre, nssPaciente: nss)
+                      
                         
-                        
-                        appointments.append(patient)
+                        appointments.append(appoint)
                     }
                     
                     

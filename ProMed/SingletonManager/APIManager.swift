@@ -44,5 +44,14 @@ final class APIManager {
         return dateFormatter
     }
     
+    func dateFormatHMS() -> DateFormatter {
+        var dateFormatter = DateFormatter()
+        dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:SS"
+        
+        
+        return dateFormatter
+    }
+    
     
 }

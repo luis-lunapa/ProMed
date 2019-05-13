@@ -57,7 +57,7 @@ class ProAgendaViewController: UIViewController {
 //                 "Judy Luna",
 //                 "Muñeca Luna"]
     
-    var citas = [Patient]()
+    var citas = [Appointment]()
     
     var dias = [Date]()
     
@@ -70,8 +70,14 @@ class ProAgendaViewController: UIViewController {
         self.tableView.dataSource = self
         
         self.setUpDates()
+       
         //citas.append(Patient(name: "Muñeca Luna", birthDate: "16/06/2013"))
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.getAppointments()
     }
 
     // MARK: IBActions
@@ -126,6 +132,19 @@ class ProAgendaViewController: UIViewController {
         
     }
     
+    func getAppointments() {
+        
+        APIManager.shared.networking.getAppointments().done {
+            appointments in
+            
+            self.citas = appointments
+            self.tableView.refreshControl?.endRefreshing()
+            self.tableView.reloadData()
+            
+        }
+        
+    }
+    
     
     // MARK: - General class functions
     
@@ -159,9 +178,15 @@ extension ProAgendaViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "appointmentCell", for: indexPath) as! CitaTableViewCell
         
+        print("Cita = \(self.citas[indexPath.row].nombrePaciente)")
+        cell.nameLabel.text = self.citas[indexPath.row].nombrePaciente
+        cell.dateLabel.text = APIManager.shared.dateFormatHMS().string(from: self.citas[indexPath.row].date ?? Date())
+        cell.typeLabel.text = self.citas[indexPath.row].nssPaciente
         
         
-        return cell
+        
+        
+        return UITableViewCell()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
