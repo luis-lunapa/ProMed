@@ -133,7 +133,7 @@ array (
 
 );
 
-$db->printQuery();
+
 
 if (!$result) {
     $json['status'] = '600';
