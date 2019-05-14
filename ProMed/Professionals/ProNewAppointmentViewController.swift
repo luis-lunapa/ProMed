@@ -32,6 +32,7 @@ class ProNewAppointmentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let hideKB = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
+        hideKB.delegate = self
         self.view.addGestureRecognizer(hideKB)
         self.patientsTableView.delegate = self
         self.patientsTableView.dataSource = self
@@ -44,6 +45,7 @@ class ProNewAppointmentViewController: UIViewController {
         refreshController.addTarget(self, action: #selector(self.getAllPatients), for: .valueChanged)
         self.patientsTableView.refreshControl = self.refreshController
         
+        self.getAllPatients()
         
        
 
@@ -159,4 +161,12 @@ extension ProNewAppointmentViewController: UITableViewDelegate {
         }
     }
     
+}
+
+extension ProNewAppointmentViewController: UIGestureRecognizerDelegate {
+    
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        return gestureRecognizer.view == touch.view
+    }
 }

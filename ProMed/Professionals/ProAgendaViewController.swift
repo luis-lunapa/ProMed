@@ -171,13 +171,20 @@ extension ProAgendaViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return citas.count
+        let fechaSection = self.dias[section]
+        /// Get componets year, month and day
+        
+        let sectionDate = Calendar.current.dateComponents([.year, .month, .day], from: fechaSection)
+        
+        return self.getAppointmentsNumber(in: sectionDate)
+        
+
     }
     
     // swiftlint:disable force_cast
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "appointmentCell", for: indexPath) as! CitaTableViewCell
-        
+        print("Fecha cita = \(self.citas[indexPath.row].date)")
         print("Cita = \(self.citas[indexPath.row].nombrePaciente)")
         cell.nameLabel.text = self.citas[indexPath.row].nombrePaciente
         cell.dateLabel.text = APIManager.shared.dateFormatHMS().string(from: self.citas[indexPath.row].date ?? Date())
@@ -293,6 +300,23 @@ extension ProAgendaViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         
+    }
+    
+    func getAppointmentsNumber(in components: DateComponents) -> Int {
+        var count = 0
+        for app in self.citas {
+            
+            let comp = Calendar.current.dateComponents([.year,.month,.day], from: app.date!)
+            
+            if components == comp {
+                count += 1
+            }
+            
+            
+        }
+        
+        
+       return count
     }
     
     

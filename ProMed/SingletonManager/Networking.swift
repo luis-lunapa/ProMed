@@ -215,6 +215,8 @@ final class Networking {
                 
                 ]
             
+            
+            
             Alamofire.request(APIURL.luisUrl + "addAppointment.php", parameters: parameters).responseJSON {
                 response in
                 
