@@ -194,6 +194,145 @@ final class Networking {
         
     }
     
+    func createAppointment(patient: Patient, date: Date, description: String) -> Promise<Bool> {
+        
+        var errorMessage = "There was a problem creating this appointment, try again"
+        
+        return Promise {
+            seal in
+            
+            guard let user = APIManager.shared.persistencia.currentUser else {
+                seal.reject(NSError(domain: "createAppointment", code: 0, userInfo: ["msg": "Invalid login"]))
+                return
+            }
+            
+            let parameters: [String: String] = [
+                
+                "idPatient"     : patient.idPaciente,
+                "idUser"        : user.idUsuario,
+                "date"          : APIManager.shared.dateFormatDiaMesAnioHourMinuteSecondSQL().string(from: date),
+                "description"   : description
+                
+                ]
+            
+            
+            
+            Alamofire.request(APIURL.luisUrl + "addAppointment.php", parameters: parameters).responseJSON {
+                response in
+                
+                if let data = response.result.value {
+                    let jsonData = JSON(data)
+                    print("Resultado == \(jsonData)")
+                    
+                    let status = jsonData["status"].intValue
+                    if status != 200 {
+                     
+                        seal.reject(NSError(domain: "createAppointment", code: 0, userInfo: ["msg": errorMessage]))
+                        
+                    }
+              
+                    
+                    seal.fulfill(true)
+                    
+                    
+                } else {
+                   
+                    seal.reject(NSError(domain: "createAppointment", code: 0, userInfo: ["msg": errorMessage]))
+                }
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
+    }
+    
+    func getAppointments() -> Promise<[Appointment]>{
+        var errorMessage = "Could not get appointments list"
+        
+        var appointments = [Appointment]()
+        
+        return Promise {
+            seal in
+            
+            guard let user = APIManager.shared.persistencia.currentUser else {
+                seal.reject(NSError(domain: "getAppointments", code: 0, userInfo: ["msg": "Invalid login"]))
+                return
+            }
+            
+            let parameters: [String: String] = [
+                
+                "idUsuario"    : user.idUsuario
+                
+            ]
+            
+            Alamofire.request(APIURL.luisUrl + "getAllAppointments.php", parameters: parameters).responseJSON {
+                response in
+                
+                if let data = response.result.value {
+                    let jsonData = JSON(data)
+                    print("Resultado == \(jsonData)")
+                    
+                    let status = jsonData["status"].intValue
+                    if status != 200 {
+                        
+                        
+                        
+                        os_log("getAppointments: Status no fue el esperado = %{PRIVATE}@ mensaje = %{PRIVATE}@",
+                               log: OSLog.login, type: OSLogType.error,
+                               String(describing: status),
+                               String(describing: jsonData["msg"].stringValue))
+                        
+                        seal.reject(NSError(domain: "getAllPatients", code: 0, userInfo: ["msg": errorMessage]))
+                        
+                    }
+                    
+                    let jsonAppointments = jsonData["data"].arrayValue
+                    
+                    for app in jsonAppointments {
+                        
+                        let idAppointment = app["idAppointment"].stringValue
+                        let idPaciente    = app["idPaciente"].stringValue
+                        let date          = app["date"].stringValue
+                        let description   = app["description"].stringValue
+                        
+                        let nombre        = app["nombre"].stringValue
+                        let nss           = app["nss"].stringValue
+                        
+                
+                       
+                        let realDate = APIManager.shared.dateFormatDiaMesAnioHourMinuteSecondSQL().date(from: date)
+                        
+                        let appoint = Appointment.init(idAppointment: idAppointment, idPatient: idPaciente, date: realDate ?? Date(), description: description, nombrePaciente: nombre, nssPaciente: nss)
+                      
+                        
+                        appointments.append(appoint)
+                    }
+                    
+                    
+                    seal.fulfill(appointments)
+                    
+                    
+                } else {
+                    os_log("getAppointments: Error al login error = %{PRIVATE}@",
+                           log: OSLog.getData, type: OSLogType.error,
+                           String(describing: response.error))
+                    seal.reject(NSError(domain: "getAllPatients", code: 0, userInfo: ["msg": errorMessage]))
+                }
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
+    }
+    
     
     
 }
