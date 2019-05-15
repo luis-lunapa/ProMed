@@ -24,9 +24,14 @@ class PatientTableViewCell: UITableViewCell {
     
     @IBOutlet weak var patientImg: UIImageView!
     
+    @IBOutlet weak var backGroundView: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.backGroundView.layer.cornerRadius = 10
+        self.backGroundView.layer.shadowColor = UIColor.gray.cgColor
+        self.backGroundView.layer.shadowRadius = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

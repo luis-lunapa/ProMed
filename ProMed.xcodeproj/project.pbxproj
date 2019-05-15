@@ -12,6 +12,7 @@
 		7B54095722224B1E00FA1B74 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54095622224B1E00FA1B74 /* Patient.swift */; };
 		7B5F7ACE2288E93200A5FC14 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F7ACD2288E93200A5FC14 /* LaunchScreenViewController.swift */; };
 		7B5F7AD02288EA4400A5FC14 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F7ACF2288EA4400A5FC14 /* LoginManager.swift */; };
+		7B67BFF1228B526500FA4FA7 /* ProNewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B67BFF0228B526500FA4FA7 /* ProNewPatientViewController.swift */; };
 		7B6B63DB2221B75A0062BB75 /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DA2221B75A0062BB75 /* Patients.storyboard */; };
 		7B6B63DD2221B7660062BB75 /* Professionals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6B63DC2221B7660062BB75 /* Professionals.storyboard */; };
 		7B6B63E22221F8940062BB75 /* ProAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */; };
@@ -40,6 +41,7 @@
 		7B54095622224B1E00FA1B74 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		7B5F7ACD2288E93200A5FC14 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		7B5F7ACF2288EA4400A5FC14 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		7B67BFF0228B526500FA4FA7 /* ProNewPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProNewPatientViewController.swift; sourceTree = "<group>"; };
 		7B6B63DA2221B75A0062BB75 /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
 		7B6B63DC2221B7660062BB75 /* Professionals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Professionals.storyboard; sourceTree = "<group>"; };
 		7B6B63E12221F8940062BB75 /* ProAgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProAgendaViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				7BD6C5392223A46D006E029C /* ProMyPatientsViewController.swift */,
 				7B540954222248EC00FA1B74 /* ProNewAppointmentViewController.swift */,
 				7BD6C53722239622006E029C /* ProPatientDetailsViewController.swift */,
+				7B67BFF0228B526500FA4FA7 /* ProNewPatientViewController.swift */,
 				7B714D992288B1B300D70F20 /* PatientTableViewCell.swift */,
 			);
 			path = Professionals;
@@ -334,6 +337,7 @@
 				7B9308D6224B36CE005B495A /* PatientRecord.swift in Sources */,
 				7B714D922288956400D70F20 /* Networking.swift in Sources */,
 				7B5F7AD02288EA4400A5FC14 /* LoginManager.swift in Sources */,
+				7B67BFF1228B526500FA4FA7 /* ProNewPatientViewController.swift in Sources */,
 				7B714D9622889A0B00D70F20 /* OS.swift in Sources */,
 				7B714D9A2288B1B300D70F20 /* PatientTableViewCell.swift in Sources */,
 				7BA7F24A221F604C0034B25C /* Professional.swift in Sources */,

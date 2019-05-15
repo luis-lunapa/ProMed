@@ -54,6 +54,14 @@ class ProMyPatientsViewController: UIViewController {
         
     }
     
+    
+    @IBAction func addPatientPressed(_ sender: Any) {
+        
+        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "newPatient")
+        viewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation
