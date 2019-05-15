@@ -910,6 +910,9 @@
                                                 <date key="maximumDate" timeIntervalSinceReferenceDate="126270000">
                                                     <!--2005-01-01 11:00:00 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="dateSetted:" destination="xGe-5E-OJx" eventType="valueChanged" id="NYJ-qM-JB6"/>
+                                                </connections>
                                             </datePicker>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Patient Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dgp-kS-8aj">
                                                 <rect key="frame" x="20" y="469" width="374" height="46"/>
@@ -1025,6 +1028,16 @@
                         <viewLayoutGuide key="safeArea" id="Jvz-iw-pl2"/>
                     </view>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="createPatientButton" destination="PSa-LF-RAM" id="JeU-Zx-MsU"/>
+                        <outlet property="datePicker" destination="PJT-HI-XbX" id="doV-p5-pBR"/>
+                        <outlet property="descriptionText" destination="9JM-CL-JTa" id="ACr-Nl-n6h"/>
+                        <outlet property="patientEmail" destination="NGc-ve-YC5" id="vfW-GC-A8w"/>
+                        <outlet property="patientGender" destination="Dgp-kS-8aj" id="lKA-Va-C7Y"/>
+                        <outlet property="patientName" destination="N4L-0j-QUA" id="vsk-ey-8g8"/>
+                        <outlet property="patientPhone" destination="3Yx-Tc-TGp" id="bb7-r2-HEd"/>
+                        <outlet property="patientSSN" destination="k2d-gR-d7H" id="1sP-aW-ayi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lss-LA-5fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

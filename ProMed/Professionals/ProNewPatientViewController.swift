@@ -18,16 +18,17 @@ class ProNewPatientViewController: UIViewController {
     @IBOutlet weak var patientSSN: UITextField!
     
     
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var datePicker: UIDatePicker! //
     
-    @IBOutlet weak var patientGender: UITextField!
+    @IBOutlet weak var patientGender: UITextField! ///
     
     
     @IBOutlet weak var createPatientButton: UIButton!
     
     @IBOutlet weak var descriptionText: UITextView!
     
-   
+    var fechaNacimiento: Date?
+    var genero: Int?
     
 
     override func viewDidLoad() {
@@ -57,14 +58,96 @@ class ProNewPatientViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    @IBAction func dateSetted(_ sender: Any) {
+        
+        self.fechaNacimiento = self.datePicker.date
+        
+    }
+    
+    
+    
+    
+    
     
     @IBAction func createPatientPressed(_ sender: Any) {
+        
+        if !validateData() {return}
+        
+        
+        
+        
+        
         
     }
     
     
     @IBAction func backPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    
+    func validateData() -> Bool {
+        var ready = true
+        var msg = """
+"""
+        
+        if self.patientName.text! == "" {
+            msg = """
+Patient's name \n
+"""
+  
+        }
+        
+        if self.patientEmail.text! == "" {
+            msg = """
+            Patient's email \n
+            """
+            ready = false
+        }
+        
+        if self.patientPhone.text! == "" {
+            msg = """
+            Patient's patientPhone \n
+            """
+            ready = false
+            
+        }
+        
+        if self.patientSSN.text! == "" {
+            msg = """
+            Patient's name \n
+            """
+            ready = false
+            
+        }
+        
+        if self.fechaNacimiento == nil {
+            msg = """
+            Patient's birthdate \n
+            """
+            ready = false
+            
+        }
+        
+        if self.genero == nil {
+            msg = """
+            Patient's gender \n
+            """
+            ready = false
+            
+        }
+        
+        
+        if !ready {
+            
+            Utilidades.showAlert(title: "Incomplete information", text: msg, sender: self)
+            
+        }
+        
+        
+        return ready
     }
     
 
@@ -84,3 +167,11 @@ class ProNewPatientViewController: UIViewController {
     }
 
 }
+
+extension ProNewPatientViewController: UITextFieldDelegate {
+    
+    
+    
+    
+}
+
