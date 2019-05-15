@@ -333,6 +333,66 @@ final class Networking {
         
     }
     
+    func createPatient(nombre: String, email: String, telefono: String, nacimiento: Date, genero: Int, descripcion: String, nss: String) -> Promise<Bool> {
+        
+        var errorMessage = "There was a problem creating this patient, try again"
+        
+        return Promise {
+            seal in
+            
+            guard let user = APIManager.shared.persistencia.currentUser else {
+                seal.reject(NSError(domain: "createPatient", code: 0, userInfo: ["msg": "Invalid login"]))
+                return
+            }
+            
+            let parameters: [String: Any] = [
+                
+                "idUser"        : user.idUsuario,
+                "nombre"        : nombre,
+                "email"         : email,
+                "telefono"      : telefono,
+                "fechaNac"      : APIManager.shared.dateFormatDiaMesAnioHourMinuteSecondSQL().string(from: nacimiento),
+                "genero"        : genero,
+                "descripcion"   : descripcion,
+                "nss"           : nss
+                
+            ]
+            
+            
+            
+            Alamofire.request(APIURL.luisUrl + "createPatient.php", parameters: parameters).responseJSON {
+                response in
+                
+                if let data = response.result.value {
+                    let jsonData = JSON(data)
+                    print("Resultado == \(jsonData)")
+                    
+                    let status = jsonData["status"].intValue
+                    if status != 200 {
+                        
+                        seal.reject(NSError(domain: "createPatient", code: 0, userInfo: ["msg": errorMessage]))
+                        
+                    }
+                    
+                    
+                    seal.fulfill(true)
+                    
+                    
+                } else {
+                    
+                    seal.reject(NSError(domain: "createPatient", code: 0, userInfo: ["msg": errorMessage]))
+                }
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
+    }
+    
     
     
 }
