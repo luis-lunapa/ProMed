@@ -24,9 +24,14 @@ class ProMyPatientsViewController: UIViewController {
         self.tableView.refreshControl = self.refreshController
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.getAllPatients()
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.getAllPatients()
     }
     
     @objc func getAllPatients () {
@@ -59,7 +64,8 @@ class ProMyPatientsViewController: UIViewController {
         
         let viewController = self.storyboard!.instantiateViewController(withIdentifier: "newPatient")
         viewController.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(viewController, animated: true)
+        //self.navigationController?.pushViewController(viewController, animated: true)
+        self.present(viewController, animated: true)
     }
     
 

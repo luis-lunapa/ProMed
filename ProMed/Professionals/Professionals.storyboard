@@ -854,8 +854,9 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Patient Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N4L-0j-QUA">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Patient Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N4L-0j-QUA">
                                                 <rect key="frame" x="20" y="38" width="374" height="46"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="i69-b0-Oh9"/>
                                                 </constraints>
@@ -863,8 +864,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="name"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Patient Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGc-ve-YC5">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Patient Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGc-ve-YC5">
                                                 <rect key="frame" x="20" y="92" width="374" height="46"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="tJm-CK-abw"/>
                                                 </constraints>
@@ -872,8 +874,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Patient Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Yx-Tc-TGp">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Patient Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Yx-Tc-TGp">
                                                 <rect key="frame" x="20" y="146" width="374" height="46"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="Oz9-aP-JeI"/>
                                                 </constraints>
@@ -881,8 +884,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Patient SSN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k2d-gR-d7H">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Patient SSN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k2d-gR-d7H">
                                                 <rect key="frame" x="20" y="200" width="374" height="46"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="gqr-ma-00H"/>
                                                 </constraints>
@@ -914,15 +918,6 @@
                                                     <action selector="dateSetted:" destination="xGe-5E-OJx" eventType="valueChanged" id="NYJ-qM-JB6"/>
                                                 </connections>
                                             </datePicker>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Patient Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dgp-kS-8aj">
-                                                <rect key="frame" x="20" y="469" width="374" height="46"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="46" id="1gY-0t-vdT"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc2-Jp-2NC">
                                                 <rect key="frame" x="20" y="523" width="98" height="23"/>
                                                 <constraints>
@@ -964,34 +959,46 @@
                                                     <action selector="createPatientPressed:" destination="xGe-5E-OJx" eventType="touchUpInside" id="gW7-mQ-1ri"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DE-iK-GpF">
+                                                <rect key="frame" x="20" y="470" width="374" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="A2W-2i-b0A"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="tintColor" red="0.30857454080000002" green="0.44131662519999998" blue="0.92164036130000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Gender"/>
+                                                <connections>
+                                                    <action selector="chooseGenderPressed:" destination="xGe-5E-OJx" eventType="touchUpInside" id="cPN-zQ-pYs"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kc2-Jp-2NC" secondAttribute="trailing" constant="10" id="20u-41-ynF"/>
                                             <constraint firstItem="PJT-HI-XbX" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" id="4VS-Z4-wGg"/>
                                             <constraint firstItem="9JM-CL-JTa" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="5g1-qR-jvg"/>
-                                            <constraint firstItem="Dgp-kS-8aj" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="6Ob-ja-4cp"/>
                                             <constraint firstItem="PSa-LF-RAM" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="104.5" id="845-SH-WFQ"/>
                                             <constraint firstItem="3Yx-Tc-TGp" firstAttribute="top" secondItem="NGc-ve-YC5" secondAttribute="bottom" constant="8" id="8ip-3a-da3"/>
                                             <constraint firstAttribute="trailing" secondItem="9JM-CL-JTa" secondAttribute="trailing" constant="20" id="BG2-nC-wc5"/>
                                             <constraint firstItem="PSa-LF-RAM" firstAttribute="top" secondItem="9JM-CL-JTa" secondAttribute="bottom" constant="25" id="Dt2-lr-MCe"/>
                                             <constraint firstAttribute="trailing" secondItem="PJT-HI-XbX" secondAttribute="trailing" id="KJD-1N-9eT"/>
                                             <constraint firstItem="k2d-gR-d7H" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="NRQ-DX-A0H"/>
+                                            <constraint firstAttribute="trailing" secondItem="1DE-iK-GpF" secondAttribute="trailing" constant="20" id="NYj-Jx-kbx"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mx5-Fh-kJW" secondAttribute="trailing" constant="10" id="NmL-JI-TUM"/>
                                             <constraint firstAttribute="trailing" secondItem="3Yx-Tc-TGp" secondAttribute="trailing" constant="20" id="O0z-xf-BX9"/>
                                             <constraint firstItem="NGc-ve-YC5" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="TmL-Kz-kwF"/>
                                             <constraint firstItem="3Yx-Tc-TGp" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="TrK-TU-eQe"/>
-                                            <constraint firstItem="Kc2-Jp-2NC" firstAttribute="top" secondItem="Dgp-kS-8aj" secondAttribute="bottom" constant="8" id="WMt-xh-U3K"/>
                                             <constraint firstAttribute="trailing" secondItem="N4L-0j-QUA" secondAttribute="trailing" constant="20" id="Whj-Ub-7sa"/>
-                                            <constraint firstItem="Dgp-kS-8aj" firstAttribute="top" secondItem="PJT-HI-XbX" secondAttribute="bottom" constant="22" id="WiM-A1-5vb"/>
                                             <constraint firstItem="Mx5-Fh-kJW" firstAttribute="top" secondItem="Vp6-hE-i0C" secondAttribute="top" constant="7" id="XGE-61-IoN"/>
-                                            <constraint firstAttribute="trailing" secondItem="Dgp-kS-8aj" secondAttribute="trailing" constant="20" id="YcQ-NK-VIt"/>
+                                            <constraint firstItem="1DE-iK-GpF" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="XXn-Vt-VHK"/>
                                             <constraint firstItem="Fwi-N4-YAY" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="Yft-HL-dc7"/>
                                             <constraint firstItem="Mx5-Fh-kJW" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="bEw-vv-xU0"/>
+                                            <constraint firstItem="1DE-iK-GpF" firstAttribute="top" secondItem="PJT-HI-XbX" secondAttribute="bottom" constant="23" id="bbQ-Rk-KrK"/>
                                             <constraint firstAttribute="trailing" secondItem="NGc-ve-YC5" secondAttribute="trailing" constant="20" id="fBd-Sf-VKd"/>
                                             <constraint firstItem="9JM-CL-JTa" firstAttribute="top" secondItem="Kc2-Jp-2NC" secondAttribute="bottom" constant="8" id="g9X-0E-6zi"/>
                                             <constraint firstAttribute="trailing" secondItem="PSa-LF-RAM" secondAttribute="trailing" constant="104.5" id="h57-51-5Vq"/>
                                             <constraint firstItem="N4L-0j-QUA" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="hRZ-Rc-n6a"/>
                                             <constraint firstAttribute="bottom" secondItem="PSa-LF-RAM" secondAttribute="bottom" constant="338" id="hhC-cp-egT"/>
+                                            <constraint firstItem="Kc2-Jp-2NC" firstAttribute="top" secondItem="1DE-iK-GpF" secondAttribute="bottom" constant="8" id="jNu-KL-D9o"/>
                                             <constraint firstItem="Kc2-Jp-2NC" firstAttribute="leading" secondItem="Vp6-hE-i0C" secondAttribute="leading" constant="20" id="jOL-q3-Vjk"/>
                                             <constraint firstAttribute="trailing" secondItem="k2d-gR-d7H" secondAttribute="trailing" constant="20" id="mYS-Rf-jSm"/>
                                             <constraint firstItem="PJT-HI-XbX" firstAttribute="top" secondItem="Fwi-N4-YAY" secondAttribute="bottom" constant="8" id="mbq-Lf-Mhn"/>
@@ -1033,7 +1040,7 @@
                         <outlet property="datePicker" destination="PJT-HI-XbX" id="doV-p5-pBR"/>
                         <outlet property="descriptionText" destination="9JM-CL-JTa" id="ACr-Nl-n6h"/>
                         <outlet property="patientEmail" destination="NGc-ve-YC5" id="vfW-GC-A8w"/>
-                        <outlet property="patientGender" destination="Dgp-kS-8aj" id="lKA-Va-C7Y"/>
+                        <outlet property="patientGender" destination="1DE-iK-GpF" id="ZKz-80-c2q"/>
                         <outlet property="patientName" destination="N4L-0j-QUA" id="vsk-ey-8g8"/>
                         <outlet property="patientPhone" destination="3Yx-Tc-TGp" id="bb7-r2-HEd"/>
                         <outlet property="patientSSN" destination="k2d-gR-d7H" id="1sP-aW-ayi"/>

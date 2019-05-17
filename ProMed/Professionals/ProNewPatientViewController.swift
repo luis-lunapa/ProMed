@@ -20,7 +20,7 @@ class ProNewPatientViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker! //
     
-    @IBOutlet weak var patientGender: UITextField! ///
+    @IBOutlet weak var patientGender: UIButton! ///
     
     
     @IBOutlet weak var createPatientButton: UIButton!
@@ -36,6 +36,13 @@ class ProNewPatientViewController: UIViewController {
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.hideKeyboard))
         
         self.view.addGestureRecognizer(tap)
+        self.patientName.delegate = self
+        self.patientEmail.delegate = self
+        self.patientPhone.delegate = self
+        self.patientSSN.delegate = self
+        
+        
+        
         
         self.setupViews()
         
@@ -65,14 +72,70 @@ class ProNewPatientViewController: UIViewController {
     }
     
     
+    @IBAction func chooseGenderPressed(_ sender: Any) {
+        
+        let alert = UIAlertController.init(title: "Choose gender", message: nil, preferredStyle: .actionSheet)
+        
+        let male = UIAlertAction.init(title: "Male", style: .default) {
+            action in
+            self.genero = 0
+            self.patientGender.setTitle("Male", for: .normal)
+            
+        }
+        
+        let female = UIAlertAction.init(title: "Female", style: .default) {
+            action in
+            self.genero = 1
+            self.patientGender.setTitle("Female", for: .normal)
+            
+        }
+        
+        alert.addAction(male)
+        alert.addAction(female)
+        
+        self.present(alert,animated: true)
+        
+        
+        
+        
+    }
+    
     
     
     
     
     @IBAction func createPatientPressed(_ sender: Any) {
         
-        if !validateData() {return}
+        if !validateData() { return }
         
+        let name = self.patientName.text!
+        let email = self.patientEmail.text!
+        let phone = self.patientPhone.text!
+        let nss = self.patientSSN.text!
+        
+        let gender = self.genero!
+        let fecha = self.fechaNacimiento!
+        
+        let descripcion = self.descriptionText.text!
+        
+        
+        APIManager.shared.networking.createPatient(nombre: name, email: email, telefono: phone, nacimiento: fecha, genero: gender, descripcion: descripcion, nss: nss).done {
+            ready in
+            
+            self.dismiss(animated: true) {
+                Utilidades.showAlert(title: "Great", text: "New patient created", sender: self)
+            }
+           
+        }.catch {
+            error in
+            let error = error as NSError
+            
+            Utilidades.showAlert(title: "Oops", text: error.userInfo["msg"] as? String, sender: self)
+            
+            
+                
+                
+        }
         
         
         
@@ -170,7 +233,27 @@ Patient's name \n
 
 extension ProNewPatientViewController: UITextFieldDelegate {
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        if textField == self.patientName {
+            self.patientEmail.becomeFirstResponder()
+            
+        } else if textField == self.patientEmail {
+            
+            patientPhone.becomeFirstResponder()
+            
+        } else if textField == self.patientPhone {
+            
+            self.patientSSN.becomeFirstResponder()
+            
+        } else if textField == self.patientSSN {
+            
+            
+        }
+ 
+        return true
+    }
     
     
 }
