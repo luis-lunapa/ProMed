@@ -39,7 +39,7 @@ class ProMyPatientsViewController: UIViewController {
         APIManager.shared.networking.getAllPatients().done {
             patients in
             
-            print("PAtient")
+            print("PAtients = \(patients)")
             self.patients = patients
             self.isSearching = false
             self.tableView.refreshControl?.endRefreshing()

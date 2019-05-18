@@ -133,7 +133,7 @@ final class Networking {
                 
                 if let data = response.result.value {
                     let jsonData = JSON(data)
-                    print("Resultado == \(jsonData)")
+                    //print("Resultado == \(jsonData)")
                     
                     let status = jsonData["status"].intValue
                     if status != 200 {
@@ -274,7 +274,7 @@ final class Networking {
                 
                 if let data = response.result.value {
                     let jsonData = JSON(data)
-                    print("Resultado == \(jsonData)")
+                    print("Appointments == \(jsonData)")
                     
                     let status = jsonData["status"].intValue
                     if status != 200 {

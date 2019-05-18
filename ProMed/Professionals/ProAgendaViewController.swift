@@ -183,13 +183,25 @@ extension ProAgendaViewController: UITableViewDelegate, UITableViewDataSource {
     
     // swiftlint:disable force_cast
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "appointmentCell", for: indexPath) as! CitaTableViewCell
-        print("Fecha cita = \(self.citas[indexPath.row].date)")
-        print("Cita = \(self.citas[indexPath.row].nombrePaciente)")
-        cell.nameLabel.text = self.citas[indexPath.row].nombrePaciente
-        cell.dateLabel.text = APIManager.shared.dateFormatHMS().string(from: self.citas[indexPath.row].date ?? Date())
-        cell.typeLabel.text = self.citas[indexPath.row].nssPaciente
         
+        let fechaCita = self.citas[indexPath.row].date!
+        
+        let fechaSection = self.dias[indexPath.section]
+        
+        let appointmentDate = Calendar.current.dateComponents([.year, .month, .day], from: fechaCita)
+        
+        let sectionDate = Calendar.current.dateComponents([.year, .month, .day], from: fechaSection)
+        
+        if appointmentDate == sectionDate {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "appointmentCell", for: indexPath) as! CitaTableViewCell
+            print("Fecha cita = \(self.citas[indexPath.row].date)")
+            print("Cita = \(self.citas[indexPath.row].nombrePaciente)")
+            cell.nameLabel.text = self.citas[indexPath.row].nombrePaciente
+            cell.dateLabel.text = APIManager.shared.dateFormatHMS().string(from: self.citas[indexPath.row].date ?? Date())
+            cell.typeLabel.text = self.citas[indexPath.row].nssPaciente
+            
+            
+        }
         
         
         
