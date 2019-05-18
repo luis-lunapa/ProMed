@@ -50,7 +50,7 @@ final class Persistencia {
     private func getKey() -> NSData {
         print("Obteniendo llave realm")
         // Identificador para el llavero unico
-        let keychainIdentifier = "com.livenia.stream"
+        let keychainIdentifier = "com.promed.local"
         let keychainIdentifierData = keychainIdentifier.data(using: String.Encoding.utf8, allowLossyConversion: false)!
         
         // Verificar si la entrada ya existe en el llavero

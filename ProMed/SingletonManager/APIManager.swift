@@ -10,8 +10,7 @@ import Foundation
 
 final class APIManager {
     private init (){}
-    
-    
+
     static let shared = APIManager()
     let persistencia = Persistencia()
     let networking: Networking = Networking()
@@ -29,8 +28,6 @@ final class APIManager {
         var dateFormatter = DateFormatter()
         dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        
-        
         return dateFormatter
     }
     
@@ -39,8 +36,6 @@ final class APIManager {
         var dateFormatter = DateFormatter()
         dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:SS"
-        
-        
         return dateFormatter
     }
     
@@ -48,8 +43,6 @@ final class APIManager {
         var dateFormatter = DateFormatter()
         dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:SS"
-        
-        
         return dateFormatter
     }
     
